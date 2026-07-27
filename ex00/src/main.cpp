@@ -6,7 +6,7 @@
 /*   By: tstelken <tstelken@student.42berlin.de>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/07/27 12:45:49 by tstelken          #+#    #+#             */
-/*   Updated: 2026/07/27 13:01:21 by tstelken         ###   ########.fr       */
+/*   Updated: 2026/07/27 14:25:24 by tstelken         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -26,4 +26,5 @@ int main(){
 	for(int i = 0; i < 8; ++i)
 		Pipa.attack("Gigi");
 	Pipa.beRepaired(5);
+	return 0;
 }

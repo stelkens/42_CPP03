@@ -6,7 +6,7 @@
 /*   By: tstelken <tstelken@student.42berlin.de>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/07/26 19:09:32 by tstelken          #+#    #+#             */
-/*   Updated: 2026/07/27 13:30:14 by tstelken         ###   ########.fr       */
+/*   Updated: 2026/07/27 15:23:48 by tstelken         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -40,7 +40,7 @@ ClapTrap &ClapTrap::operator=(const ClapTrap& other){
 		this->_energyP = other._energyP;
 		this->_attackP = other._attackP;
 	}
-	return (*this);
+	return *this;
 }
 
 //Functions
@@ -77,7 +77,7 @@ void	ClapTrap::beRepaired(unsigned int amount){
 		return;
 	}
 	if(_energyP > 0){
-		std::cout << "ClapTrap " << _name << ":\trepairs itself gaining" << amount << " Hit points\n";
+		std::cout << "ClapTrap " << _name << ":\trepairs itself gaining " << amount << " Hit points\n";
 		--_energyP;
 		_hitP += amount;
 	}
