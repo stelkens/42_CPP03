@@ -6,7 +6,7 @@
 /*   By: tstelken <tstelken@student.42berlin.de>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/07/26 19:09:47 by tstelken          #+#    #+#             */
-/*   Updated: 2026/07/27 15:19:21 by tstelken         ###   ########.fr       */
+/*   Updated: 2026/07/28 11:45:38 by tstelken         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -31,7 +31,7 @@ class ClapTrap
 				const unsigned int hitP, 
 				const unsigned int energyP,
 				const unsigned int attackP);
-		~ClapTrap();
+		virtual ~ClapTrap();
 
 		ClapTrap &operator =(const ClapTrap& other);
 
