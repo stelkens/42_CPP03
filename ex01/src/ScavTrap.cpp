@@ -6,7 +6,7 @@
 /*   By: tstelken <tstelken@student.42berlin.de>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/07/27 13:49:41 by tstelken          #+#    #+#             */
-/*   Updated: 2026/07/27 15:23:29 by tstelken         ###   ########.fr       */
+/*   Updated: 2026/07/28 10:14:26 by tstelken         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -46,7 +46,7 @@ ScavTrap &ScavTrap::operator=(const ScavTrap &other){
 	return *this;
 }
 
-void	ScavTrap::_guardGate(void){
+void	ScavTrap::guardGate(void){
 	if(_guardMode){
 		std::cout << "ScavTrap " << _name << ":\twas already in Gate keeper mode\n";
 		return ;
