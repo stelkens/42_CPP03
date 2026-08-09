@@ -47,32 +47,3 @@ void	FragTrap::attack(const std::string& target){
 	else
 		std::cout << "FragTrap " << _name << ":\twants to attack but has no Energy Points left\n";
 }
-
-void	FragTrap::takeDamage(unsigned int amount)
-{
-	if(_hitP > amount){
-		std::cout << "FragTrap " << _name << ":\ttakes " << amount << " Points of damage\n";
-		_hitP -= amount;
-	}
-	else if (_hitP > 0){
-		std::cout << "FragTrap " << _name << ":\ttakes " << _hitP << " Points of damage and is O.K.\n";
-		_hitP = 0;
-	}
-	else
-		std::cout << "FragTrap " << _name << ":\tis O.K.\n";
-}
-
-void	FragTrap::beRepaired(unsigned int amount)
-{
-	if(!_hitP){
-		std::cout << "FragTrap " << _name << ":\twants to repair itself but is O.K.\n";
-		return;
-	}
-	if(_energyP > 0){
-		std::cout << "FragTrap " << _name << ":\trepairs itself gaining " << amount << " Hit points\n";
-		--_energyP;
-		_hitP += amount;
-	}
-	else
-		std::cout << "FragTrap " << _name << ":\twants to repair itself but has no Energy Points left\n";
-}

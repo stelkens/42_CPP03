@@ -6,7 +6,7 @@
 /*   By: tstelken <tstelken@student.42berlin.de>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/07/27 13:49:41 by tstelken          #+#    #+#             */
-/*   Updated: 2026/07/28 10:15:03 by tstelken         ###   ########.fr       */
+/*   Updated: 2026/08/09 19:19:08 by tstelken         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -66,33 +66,4 @@ void	ScavTrap::attack(const std::string& target){
 	}
 	else
 		std::cout << "ScavTrap " << _name << ":\twants to attack but has no Energy Points left\n";
-}
-
-void	ScavTrap::takeDamage(unsigned int amount)
-{
-	if(_hitP > amount){
-		std::cout << "ScavTrap " << _name << ":\ttakes " << amount << " Points of damage\n";
-		_hitP -= amount;
-	}
-	else if (_hitP > 0){
-		std::cout << "ScavTrap " << _name << ":\ttakes " << _hitP << " Points of damage and is O.K.\n";
-		_hitP = 0;
-	}
-	else
-		std::cout << "ScavTrap " << _name << ":\tis O.K.\n";
-}
-
-void	ScavTrap::beRepaired(unsigned int amount)
-{
-	if(!_hitP){
-		std::cout << "ScavTrap " << _name << ":\twants to repair itself but is O.K.\n";
-		return;
-	}
-	if(_energyP > 0){
-		std::cout << "ScavTrap " << _name << ":\trepairs itself gaining " << amount << " Hit points\n";
-		--_energyP;
-		_hitP += amount;
-	}
-	else
-		std::cout << "ScavTrap " << _name << ":\twants to repair itself but has no Energy Points left\n";
 }

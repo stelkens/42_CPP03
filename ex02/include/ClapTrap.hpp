@@ -6,7 +6,7 @@
 /*   By: tstelken <tstelken@student.42berlin.de>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/07/26 19:09:47 by tstelken          #+#    #+#             */
-/*   Updated: 2026/07/28 11:49:15 by tstelken         ###   ########.fr       */
+/*   Updated: 2026/08/09 19:17:34 by tstelken         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -36,8 +36,8 @@ class ClapTrap
 		ClapTrap &operator =(const ClapTrap& other);
 
 		virtual void	attack(const std::string& target); // virtual so i can overrid the method in ScavTrap
-		virtual void	takeDamage(unsigned int amount);
-		virtual void	beRepaired(unsigned int amount);
+		void	takeDamage(unsigned int amount);
+		void	beRepaired(unsigned int amount);
 
 };
 
